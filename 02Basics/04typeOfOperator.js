@@ -1,3 +1,3 @@
-var value = true
+var value = true;
 
-console.log(typeof value)
+console.log(typeof value);
