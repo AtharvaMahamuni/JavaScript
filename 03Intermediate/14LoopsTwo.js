@@ -7,4 +7,4 @@ const myStates = [
   "Assam",
 ];
 
-myStates.forEach((s) => console.log(s));
+// myStates.forEach((s) => console.log(s));
