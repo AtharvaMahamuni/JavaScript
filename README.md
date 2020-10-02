@@ -1,2 +1,2 @@
 # JavaScript
-This is the repository of JavaScript Course I am taking from youtuber Hitesh Choudhary.
+This is repositroy of javascript which I am learning from various resources.
