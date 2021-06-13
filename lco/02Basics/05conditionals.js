@@ -1,6 +1,6 @@
 var temperature;
 
-//TODO:  Take data from google
+//TODO:  Take data from temperature API
 
 temperature = 30;
 
@@ -13,3 +13,6 @@ if (temperature < 20) {
 } else {
   console.log("It is very high temperature.");
 }
+
+// === -> We will see it later 
+// == -> I know this
