@@ -1,15 +1,24 @@
 var fullName = "Atharva Mahamuni";
 console.log(fullName);
 
-var booleanValue = true;
-console.log(booleanValue);
+var courseName = "JavaScript Course";
 
-var number; //variable declaration
-console.log(number); //output will be undefined because no. is not assigned
+var isLoggedIn = false;
 
-number = 55; //variable initialization
-console.log(number);
+var loggedCount = 34; 
 
-var courseName = "javaScript course";
+console.log(loggedCount)
 
-//var if = 22;  //we can't use if becasue it is one of the keyword in js
+
+var paymentMode;
+console.log(paymentMode); //It comes undefined becuase there is no value.
+
+paymentMode = "Credit card";
+console.log(paymentMode);
+
+// var if = 23; // Can't be used becuase if is the reserved keyword.
+
+
+/*
+Write now just remeber we can store the numbers strings and the booleans
+*/
