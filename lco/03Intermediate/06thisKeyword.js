@@ -1,6 +1,7 @@
 //TODO: This keyword part 1
 
-console.log(this);
+console.log(this); // {}
+//It gives us the empty scope on node engine which ultimeately supports the V8 engine.
 
 /*****
  * We have this keyword which give us the global context
