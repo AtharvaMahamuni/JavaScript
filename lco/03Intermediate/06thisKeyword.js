@@ -16,3 +16,5 @@ console.log(this); // {}
 // }
 
 // sayName();
+
+// When above code run on a browser it shows the entire window object which contain so many things in it.
