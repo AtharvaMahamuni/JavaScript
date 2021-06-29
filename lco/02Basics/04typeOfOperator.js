@@ -8,7 +8,7 @@ console.log(typeof value); //boolean
 
 
 var num = 5;  
-console.log(typeof num); //number
+console.log(typeof num); //number is appear here
 
 // typeof is one of the operator which give us the type of variable.
 

@@ -5,8 +5,9 @@ var user = {
   loginCount: 32,
   facebookSignedIn: true,
   courseList: [],
-  buyCourse: function (courseName) {
-    this.courseList.push(courseName);
+
+  buyCourse: function(courseName){
+    this.courseList.push(courseName); // this is used to push element in context of current instance.
   },
 
   getCourseCount: function () {

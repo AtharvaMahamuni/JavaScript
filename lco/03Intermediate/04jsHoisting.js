@@ -31,9 +31,5 @@ function sayName() {
   console.log(name); // undefined
   var name = "mr. X";
   console.log(name); // mr. X
-
-
-
-  
 }
 sayName();

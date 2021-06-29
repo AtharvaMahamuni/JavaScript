@@ -1,10 +1,18 @@
 const myStates = [
-  "Maharashtra",
-  "Gujrat",
-  "Tamil Nadu",
-  2003,
-  "Rajasthan",
-  "Assam",
+  "Rajasthan", 
+  "Maharashtra", 
+  1947, 
+  "Assam", 
+  "Andhrapradesh", 
+  "Goa"
 ];
 
-// myStates.forEach((s) => console.log(s));
+// TODO: One tricky question
+// var i = 0;
+// for(;;){
+//   if (i > 3) break; 
+//   console.log(i);
+//   i++;
+// }
+
+myStates.forEach((s) => console.log(s));

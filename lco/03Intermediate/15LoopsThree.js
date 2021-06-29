@@ -1,8 +1,9 @@
 const names = ["FaceBook", "Instagram", "Twitter", "YouTube"];
 
-// for (const i of names) {
-//   console.log(i);
-// }
+// FIXME: for-of loop
+for (const i of names) {
+  console.log(i);
+}
 
 const nameObject = {
   fb: "FaceBook",
@@ -12,6 +13,8 @@ const nameObject = {
 };
 
 for (const i in nameObject) {
-  //   console.log(i);
-  console.log(nameObject[i]);
+  // console.log(i + " : " + nameObject[i]);
+  // console.log(nameObject[i]);
+
+  console.log(`Key is: ${i} and the value is: ${nameObject[i]}`);
 }
