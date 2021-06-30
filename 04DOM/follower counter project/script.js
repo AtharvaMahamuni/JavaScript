@@ -21,8 +21,6 @@
 
 var counter = document.querySelector(".counter")
 
-var followers = document.querySelector(".followers")
-
 let count = 0;
 
 setInterval(()=>{
@@ -32,6 +30,8 @@ setInterval(()=>{
   }
 }, 1)
 
+
+var followers = document.querySelector(".followers")
 
 setTimeout(()=>{
   followers.innerText = "Followers on Bird App!!!"
