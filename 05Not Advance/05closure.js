@@ -31,5 +31,5 @@ var add5 = doAddition(5); //Here we get the reference of function inside doAddit
 console.log(add5(4)); // 9
 console.log(add5(10)); // 15
 
-
+// This concep is known as curring when we used the 2 paranthesis.
 console.log(doAddition(3)(2)); // 5
