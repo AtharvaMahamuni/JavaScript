@@ -16,11 +16,12 @@ User.prototype.getFirstName = function(){
 }
 
 // When there is new keyword object get created and memory get allocated which is pointed by the object name. So it invokes the consturctor. 
+// new keyword also helps to point the this keyword from window object to the User object
 atharva = new User("Atharva", 2);
 // console.log(atharva);
 
 // console.log(atharva.firstName)
-atharva.getFirstName()
+atharva.getFirstName() // It is a blunt call we don't know the property is exist or not but we can use hasOwnProperty() method to check that as given below
 
 // console.log(atharva.courseCount);
 atharva.getCourseCount();
@@ -30,6 +31,7 @@ console.log(sam);
 
 
 // This is more better way to call the method by checking whether we have the property or not.
-if (sam.hasOwnProperty("firstName")) {
+// It will check whether the method or variable is present or not and then executes the function.
+if (sam.hasOwnProperty("firstName")) { // Here we are passing the name of variable in ""
     sam.getFirstName();
 }
