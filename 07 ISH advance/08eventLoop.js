@@ -1,3 +1,4 @@
+// JavaScript don't wait if there something is loading up bydefault.
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
 
 const uno = () => {
