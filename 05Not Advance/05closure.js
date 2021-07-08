@@ -2,20 +2,20 @@
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
 
-// function init(){
-//     var firstName = "Atharva";
-//     console.log("I am init"); //It will print after call but not firstName
+function init(){
+    var firstName = "Atharva";
+    console.log("I am init"); //It will print after call but not firstName
 
-//     function sayFirstName(){
-//         // console.log(this.firstName); //undefined
-//         console.log(firstName); //Atharva
-//     }
-//     return sayFirstName; // It will return the reference of the above function.
-// }
+    function sayFirstName(){
+        // console.log(this.firstName); //undefined
+        console.log(firstName); //Atharva
+    }
+    return sayFirstName; // It will return the reference of the above function.
+}
 
-// var value = init();
+var value = init();
 
-// value(); // This is closure which printed firstName.
+value(); // This is closure which printed firstName.
 
 
 
@@ -31,5 +31,5 @@ var add5 = doAddition(5); //Here we get the reference of function inside doAddit
 console.log(add5(4)); // 9
 console.log(add5(10)); // 15
 
-// This concep is known as curring when we used the 2 paranthesis.
+// This concep is known as curring when we use the 2 paranthesis.
 console.log(doAddition(3)(2)); // 5

@@ -32,10 +32,14 @@ const courses = [
 // Every time when forEach loop executes it will create the following HTML element:
 // all the textNode values are given programmatically from the above array of elements.
 /*
-    <li class="list-group-item">
-        Javascript course
-        <span class="float-right">$2.1</span>
-    </li> 
+
+    <ui>
+        <li class="list-group-item">
+            JavaScript course
+            <span class="float-right"> $4.5 </span>
+        </li>
+    </ui>    
+    
 */
 
 
@@ -76,11 +80,13 @@ const button = document.querySelector(".sort-btn");
 
 // to create event with button to sort the items
 button.addEventListener("click", () => {
-    courses.sort((a, b) => a.price - b.price); // sorting my list according to prices
+    courses.sort((a, b) => a.price - b.price); // sorting list according to prices
     genearteLIST();
 });
 
 
+
+// TODO: Assignment
 // blue button to sort items in decending order
 const  buttonDesc = document.querySelector(".sort-btn-desc");
 
