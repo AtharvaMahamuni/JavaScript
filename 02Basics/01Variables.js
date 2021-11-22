@@ -1,15 +1,20 @@
-var fullName = "Atharva Mahamuni";
-console.log(fullName);
+// var fullName = "Atharva Mahamuni";
+// console.log(fullName);
 
+// FIXME: Strings
 var courseName = "JavaScript Course";
+console.log(courseName);
 
-var isLoggedIn = false;
+// FIXME: Boolean
+// var isLoggedIn = false;
+// console.log(isLoggedIn);
 
-var loggedCount = 34; 
+// FIXME: numbers
+// var loggedCount = 34; 
+// console.log(loggedCount);
 
-console.log(loggedCount)
 
-
+// FIXME: undefined
 var paymentMode;
 console.log(paymentMode); //It comes undefined becuase there is no value.
 
