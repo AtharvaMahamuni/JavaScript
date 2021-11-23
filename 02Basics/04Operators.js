@@ -1,3 +1,5 @@
+// There are different operators present in JavaScript which are used to do various tasks of computation.
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators
 // var num1 = 7;
 // var num2 = 6;
 // console.log(num1 * num2);
