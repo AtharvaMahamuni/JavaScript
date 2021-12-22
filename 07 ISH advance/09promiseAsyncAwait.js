@@ -22,7 +22,7 @@ const tris = () => {
     return "I am Three";
 }
 
-const callMe = async() => { // async
+const callMe = async() => { // async to make it async
     let valOne = uno()
     console.log(valOne);
 

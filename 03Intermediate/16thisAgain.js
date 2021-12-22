@@ -16,11 +16,11 @@ var user = {
       console.log("Line 16 : ", this); // this here will not contain the object but it contain the window object.
     }
 
-    sayHello(); // regular function call
+    sayHello(); // not a regular function call but the object function call
   },
 };
 
 user.courseCount();
 
-// FIXME: this on the line no.12 points to the object it is in i.e. user object.
-// FIXME: this on the line no.16 contains the global context becuase it is a object call not a rgular function call.
+// FIXME: this on the line no.12 points to the object it is in, i.e. user object.
+// FIXME: this on the line no.16 contains the global context becuase it is a object call not a regular function call.
