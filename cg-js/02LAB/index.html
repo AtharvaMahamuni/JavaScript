@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Compund Interest</title>
+  </head>
+  <body>
+    <script>
+      var p = 1000;
+      var r = 10;
+      var n = 1;
+
+      var ci = p * (1 + r / 100) ** n - p;
+
+      document.write("----Compund Interest----" + "<br/>");
+      document.write("<br/>");
+      document.write("Principle = " + p);
+      document.write("<br/>");
+      document.write("Rate = " + r);
+      document.write("<br/>");
+      document.write("Period = " + n);
+      document.write("<br/>");
+      document.write("--------------------" + "<br/>");
+      document.write("Compund Interest = ", ci);
+    </script>
+  </body>
+</html>
