@@ -13,8 +13,8 @@ var isLoggedInFromGoogle = false;
 // alert & prompt used in browser to take the inputs 
 //fullName = prompt("Enter your name");
 
-console.log("Full Name is: "+fullName)
-console.log("Email is: ",email)
+console.log("Full Name is: " + fullName)
+console.log("Email is: ", email)
 console.log(`
     With Unique ID: ${uid}
     User is: ${fullName}

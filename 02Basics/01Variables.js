@@ -16,7 +16,7 @@ console.log(courseName);
 
 // FIXME: undefined
 var paymentMode;
-console.log(paymentMode); //It comes undefined becuase there is no value.
+console.log(paymentMode); //It comes undefined becuase there is no value assigned.
 
 paymentMode = "Credit card";
 console.log(paymentMode);
