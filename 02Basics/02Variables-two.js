@@ -28,7 +28,7 @@ console.log(`
 firstName
 lastName
 fbLogin
-googleLongin
+googleLogin
 country & state 
 course count
 taken courses
