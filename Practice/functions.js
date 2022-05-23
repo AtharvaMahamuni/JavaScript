@@ -25,7 +25,7 @@ var b = function namedFunction() {
 // namedFunction(); // we get reference error
 
 
-// Parameter and the arguments
+// TODO: Parameter and the arguments
 
 var c = function namedFunction(param1, param2) {
     console.log("fun");
