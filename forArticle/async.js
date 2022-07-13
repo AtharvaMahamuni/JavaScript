@@ -7,7 +7,7 @@
 // });
 
 
-// fetch("https://myapp.com/api/v1/123")
+// fetch("https://api.chucknorris.io/jokes/random")
 //   .then(response => response.json()) // JSON format conversion of response (Asynchronous)
 //   .then(json => console.log(json)) // Logging the data on console
 //   .catch(error => console.error(error)); // If error is catched
@@ -15,11 +15,10 @@
 
 const { MongoClient } = require("mongodb");
 
-// MongoClient.connect("mongodb://localhost:27017", (error, client) => {
-//   // this function is a callback
-//   if (error) return console.error(error); // catching error
-
-//   const db = client.db("testDB"); // using data
-
-//   client.close(); // using data
-// });
+MongoClient.connect("mongodb://localhost:27017", (error, client) => {
+  // this function is a callback
+  if (error) return console.error(error); // catching error
+  const db = client.db("testDB"); // using data
+  console.log('Connected to database...')
+  client.close(); // using data
+});
