@@ -6,8 +6,6 @@ function sayHello(name) {
 // sayHello();
 // sayHello("Atharva");
 
-
-
 function namaste() {
   return "Welcome in India";
 }

@@ -1,8 +1,8 @@
-//we want to make user purchase from website
-//3 things to verify
-//user is logged in or not
-//user is verified email or not
-//card info is valid or not
+// we want to make user purchase from website
+// 3 things to verify
+// user is logged in or not
+// user is verified email or not
+// card info is valid or not
 
 var loggedIn = true;
 var emailVerified = true;

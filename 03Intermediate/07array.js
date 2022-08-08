@@ -15,7 +15,7 @@ console.log(cities);
 // countries.pop();
 // console.log(countries);
 
-// countries.unshift(cities[0]); // it will add the ne element at the start.
+// countries.unshift(cities[0]); // it will add the new element at the start.
 // console.log(countries);
 
 // countries.shift(); // It will remove the starting element.

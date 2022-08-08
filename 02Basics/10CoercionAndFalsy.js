@@ -7,7 +7,6 @@
 //Every value apart from this is true
 
 // TODO:
-
 // var a = 1; //undefined; //""; //null; //NaN;
 // if (a) {
 //   console.log("True value");

@@ -42,7 +42,7 @@ function sayHello() {
 sayHello()();
 
 // // Storing the returned function in `newFun` variable
-// let newFun = sayHello();
+// const newFun = sayHello();
 
 // // Calling the function which returned function with `newFun`
 // newFun();

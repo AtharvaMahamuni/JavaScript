@@ -14,7 +14,7 @@ var getUserRole = function(name, role){ //This is similar as above works in same
   switch (role) {
     case "admin":
       return `${name} is admin with all access`;
-      break; // This break will not work due to return
+      break; // This break will not work because of return
     case "subAdmin":
       return `${name} is subAdmin with access to create & delete the courses`;
     case "testPrep":
@@ -24,7 +24,6 @@ var getUserRole = function(name, role){ //This is similar as above works in same
   
     default:
       return `${name} is a trial user`
-      break;
   }
 
 }

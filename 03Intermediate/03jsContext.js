@@ -1,6 +1,7 @@
 sayHello();
 //This function call maybe not acceptable in some of the programming lanugaes but 
 //It is acceptable in JavaScript due the its global context.
+// There are 2 components of the program one is the memory component and the the 2nd is the excution componenet. Both gets load in the memory after one another. The function first get inside the memory component and made available for the execution component and then it is called.
 
 function sayHello() {
   console.log("Hello, Everyone!");
