@@ -1,0 +1,43 @@
+// TODO: Fiboanacci -
+
+const fib = (num, diary = {}) => {
+    if(num in diary) return diary[num];
+    if(num == 1 || num == 2) return 1;
+
+    diary[num] = fib(num-1, diary) + fib(num-2, diary);
+    return diary[num];
+}
+
+
+// TODO: Subset
+
+const subset = (string, index = 0, holder = '', answer = []) => {
+    if(string.length === index) {
+        answer.push(holder);
+        return answer;
+    }
+
+    return subset(string, index+1, [...holder, string[index]], answer)
+    return subset(string, index+1, [...holder], answer)
+}
+
+
+// TODO: Decimal to Binary
+
+const decToBin = (num) => {
+    if(num === 1) return '1';
+
+    return (decToBin(Math.floor(num/2)) + (num%2) );
+}
+
+
+// TODO: Near by Duplicates
+
+const nearByDuplicate = (string) => {
+    if(string.length === 1) return string;
+
+    if(string[0] === string[1])
+        return nearByDuplicate(string.slice(1))
+    
+    return string[0] + nearByDuplicate(string.slice(1))
+}
