@@ -1,0 +1,80 @@
+// TODO: Grid Traveller problem -
+
+const gridTraveller = (row, col, diary = {}) => {
+
+    let key = row + ',' + col;
+
+    if(key in diary) return diary[key];
+    if(row === 1 && col === 1) return 1;
+    if(row === 0 || col === 0) return 0;
+
+    diary[key] = gridTraveller(row-1, col) + gridTraveller(row, col-1);
+    return diary[key];
+}
+
+
+// TODO: can sum problem, identify whether the given sum can be achived or not
+
+const canSum = (targetSum, array, diary = {}) => {
+    if(targetSum in diary) return diary[targetSum];
+    if(targetSum === 0) return true;
+    if(targeSum < 0) return false;
+
+    for(let num of array) {
+        let remainder = targeSum - num;
+
+        if(canSum(remainder, array)) {
+            diary[targeSum] = true;
+            return true;
+        }
+    }
+
+    diary[targeSum] = false;
+    return false;
+}
+
+
+// TODO: how sum problem to find find the pair with which we can get the target sum.
+
+const howSum = (targetSum, array) => {
+    if(targetSum === 0) return [];
+    if(targetSum < 0) return null;
+
+    for(let num of array) {
+        let remainder = targetSum - num;
+        let result = howSum(remainder, array);
+
+        if(result !== null) {
+            return [...result, num];
+        }
+    }
+
+    return null; 
+}
+
+// TODO: Best sum problem to find the best combination to get the targetSum
+
+const bestSum = (targetSum, array, diary = {}) => {
+
+    if(targetSum in diary) return diary[targetSum];
+    if(targetSum === 0) return [];
+    if(targetSum < 0) return null;
+
+    let shortestResult = null;
+
+    for(let num of array) {
+        let remainder = targeSum - num;
+        let result = bestSum(targetSum, array);
+
+        if(result != null) {
+            let combination = [...result, num];
+
+            if(shortestResult === null || combination.length < shortestResult.length) {
+                shortestResult = combination;
+            }
+        }
+    }
+
+    diary[targeSum] = shortestResult
+    return shortestResult;
+}

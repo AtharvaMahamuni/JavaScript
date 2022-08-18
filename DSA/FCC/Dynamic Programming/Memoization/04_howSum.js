@@ -25,7 +25,7 @@ function howSum(targetSum, array, diary = {}) {
         const remainderResult = howSum(remainder, array, diary);
     
         if(remainderResult !== null) {
-            diary[targetSum] = [...remainderResult, num];
+            diary[targetSum] = [num, ...remainderResult];
             return diary[targetSum];
         }    
     }
