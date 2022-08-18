@@ -1,0 +1,50 @@
+// TODO: Reverse the sentence
+
+const reverseSentence = (sentence) => {
+    let splitSentence = sentence.split(' ');
+    let revSentence = splitSentence.reverse();
+
+    sentence = revSentence.join(' ');
+    console.log(sentence);
+}
+
+
+// TODO: Duplicate letters in string String
+
+const duplicateLetters = (string) => {
+    let diary = new Set();
+    let readStream = 0;
+    let writeStream = 0;
+
+    string = string.split('');
+
+    for(let letter of string) {
+        if(!diary.has(letter)) {
+            string[writeStream] = letter;
+            diary.add(letter);
+            writeStream += 1;
+        }
+    }
+
+    string = string.slice(0, writeStream);
+    return string.join('');
+}
+
+// TODO: Find the string is palindrome or not
+
+const palindrome = (string) => {
+    let array = string.split('');
+
+    let left = 0;
+    let right = array.length - 1;
+
+    while(right >= left) {
+        if(array[right] !== array[left]) {
+            return false;
+        }
+        right += 1;
+        left += 1;
+    }
+    
+    return true;
+}
