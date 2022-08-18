@@ -30,28 +30,28 @@ console.log(allConstruct('abcdef', ['ab', 'abc', 'cd', 'def', 'abcd']));
 console.log(allConstruct('skateboard', ['sk', 'ate', 'skate', 'teb', 'boar', 't']));
 console.log(allConstruct('skateboard', ['sk', 'ate', 'skate', 'teb', 'board', 't', 'd', 'boar']));
 
-console.log(allConstruct('eeeeeeeeeeeeeeeeeeeeeeeeeeeeef', [
-    'e',
-    'ee',
-    'eee',
-    'eeee',
-    'eeeee',
-    'eeeeee',
-    'eeeeeee',
-    'eeeeeeee',
-    'eeeeeeeee',
-    'eeeeeeeeee',
-]));
+// console.log(allConstruct('eeeeeeeeeeeeeeeeeeeeeeeeeeeeef', [
+//     'e',
+//     'ee',
+//     'eee',
+//     'eeee',
+//     'eeeee',
+//     'eeeeee',
+//     'eeeeeee',
+//     'eeeeeeee',
+//     'eeeeeeeee',
+//     'eeeeeeeeee',
+// ]));
 
-console.log(allConstruct('eeeeeeeeeeeeeeeeeeeeeeeeeeeeef', [
-    'ef',
-    'ee',
-    'eee',
-    'eeee',
-    'eeeee',
-    'eeeeee',
-    'eeeeeee',
-    'eeeeeeee',
-    'eeeeeeeee',
-    'eeeeeeeeee',
-]));
+// console.log(allConstruct('eeeeeeeeeeeeeeeeeeeeeeeeeeeeef', [
+//     'ef',
+//     'ee',
+//     'eee',
+//     'eeee',
+//     'eeeee',
+//     'eeeeee',
+//     'eeeeeee',
+//     'eeeeeeee',
+//     'eeeeeeeee',
+//     'eeeeeeeeee',
+// ]));

@@ -78,3 +78,61 @@ const bestSum = (targetSum, array, diary = {}) => {
     diary[targeSum] = shortestResult
     return shortestResult;
 }
+
+
+// TODO: Can construct problem to find out if the targetString can be constructed from given wordBank.
+
+const canConstruct = (targetString, wordBank) => {
+    if(targetString === '') return true;
+    
+    for(let word of wordBank) {
+        if(targetString.indexOf(word) === 0) {
+            let cutString = targetString.slice(word.length);
+
+            if(canConstruct(cutString, wordBank)) {
+                return true;
+            }
+        }
+    } 
+
+    return false;
+}
+
+
+// TODO: count construct problem to count the number of ways to construct the targeted string
+
+const countConstruct = (targetString, wordBank) => {
+    if(targetString === '') return 1;
+
+    let numberOfCombinations = 0;
+
+    for(let word of wordBank) {
+        if(targetString.indexOf(word) === 0) {
+            let cutString = targetString.slice(word.length);
+            let result = countConstruct(cutString, wordBank);
+
+            numberOfCombinations += result;
+        }
+    }
+
+    return numberOfCombinations;
+}
+
+// TODO: all construct problem to find out all the ways to construct the targeted string
+
+const allConstruct = (targetString, wordBank) => {
+    if(targetString === '') return [[]];
+
+    let stringCombinations = [];
+
+    for(let word of wordBank) {
+        if(targetString.indexOf(word) === 0){
+            let suffix = targetString.slice(word.length);
+            let result = allConstruct(suffix, wordBank);
+            let combination = result.map(way => [word, ...way]);
+            stringCombinations.push(...combination);
+        }
+    }
+
+    return stringCombinations;
+}
