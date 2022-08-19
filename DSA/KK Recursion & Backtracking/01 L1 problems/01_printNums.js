@@ -77,8 +77,16 @@ function findSum(n) {
 
 // TODO: Reverse a number
 
-function reversNumber(n) {
-    if(n <= 1) return n;
+function reverseNumber(n) {
 
-    
+    let rev = 0;
+
+    while(n !== 0) {
+        rev = (n%10) + rev * 10;
+        n = Math.floor(n/10);
+    }
+
+    return (rev);
 }
+
+// console.log(reverseNumber(34523));
