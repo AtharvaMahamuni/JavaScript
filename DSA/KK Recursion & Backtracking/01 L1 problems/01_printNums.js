@@ -76,17 +76,53 @@ function findSum(n) {
 
 
 // TODO: Reverse a number
+// Requires a helper function to solve it in with pure recursion and not with a global variable.
 
-function reverseNumber(n) {
+const reverseNumberHelper = (n, power) => {
+    if(n%10 === n) return n;
 
-    let rev = 0;
+    return (n%10)*Math.pow(10, power) 
+        + reverseNumberHelper(Math.floor(n/10), power - 1);
+}
 
-    while(n !== 0) {
-        rev = (n%10) + rev * 10;
-        n = Math.floor(n/10);
-    }
+const reverseNumber = (n) => {
+    let power = n.toString().length;
+    // console.log(power);
 
-    return (rev);
+    return reverseNumberHelper(n, power-1)
 }
 
 // console.log(reverseNumber(34523));
+
+
+// TODO: Find if the given number is palindrome or not.
+
+const palindromeHelper = (num, power) => {
+    if(num%10 === num) return true;
+
+    if(num%10 === Math.floor(num/Math.pow(10, power))) {
+        let cut = (num - ((num%10) + Math.floor((num/Math.pow(10, power)))))%10;
+        return palindromeHelper(cut, power - 1);
+    }
+
+    return false;
+}
+
+const palindrome = (num) => {
+    let power = num.toString().length;
+
+    return palindromeHelper(num, power - 1);
+}
+
+
+// TODO: Count the number of zeros in the given number
+
+const zeros = (num, count = 0) => {
+    if(num%10 === num) return count;
+
+    if(num%10 === 0)
+        return zeros(Math.floor(num/10), ++count)
+
+    else
+        return zeros(Math.floor(num/10), count)
+}
