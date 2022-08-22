@@ -62,11 +62,37 @@ const zipperList = (head1, head2) => {
 }
 
 
+// printLinkedList(a);
+// printLinkedList(x);
+// console.log('----------------');
+// zipperList(a, x);
+// printLinkedList(a);
 
 
+// TODO: The recursive version of the zipper list 
+
+const zipperHelper = (head1, head2, count, tail) => {
+    if(head1 === null || head2 === null) return;
+
+    if(count%2 === 0) { //head1
+        let temp = head1.next;
+        tail.next = head2;
+        return zipperHelper(temp, head2, count+1, head2);
+    }
+
+    if(count%2 === 1) { //head2
+        let temp = head2.next;
+        tail.next = head1;
+        return zipperHelper(head1, temp, count+1, head1);
+    }
+}
+
+const zipperListRecursive = (head1, head2) => {
+    return zipperHelper(head1, head2, 0, head1);
+}
 
 printLinkedList(a);
 printLinkedList(x);
 console.log('----------------');
-zipperList(a, x);
+zipperListRecursive(a, x);
 printLinkedList(a);
