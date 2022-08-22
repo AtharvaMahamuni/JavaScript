@@ -47,10 +47,29 @@ const reverseList = (head) => {
 }
 
 
-printLinkedList(a);
-console.log('.....');
-console.log(reverseList(a));
-console.log('.....');
-printLinkedList(d);
+// printLinkedList(a);
+// console.log('.....');
+// console.log(reverseList(a));
+// console.log('.....');
+// printLinkedList(d);
 
 
+// TODO: Reverse linked list recursive 
+
+const reverseHelper = (prev, curr) => {
+    if(curr === null) return prev;
+
+    let next = curr.next;
+    curr.next = prev;
+    return reverseHelper(curr, next);
+}
+
+const reverseLinkedList = (head) => {
+    return reverseHelper(null, head, head.next);
+}
+
+// printLinkedList(a);
+// console.log('.....');
+// console.log(reverseLinkedList(a));
+// console.log('.....');
+// printLinkedList(d);
