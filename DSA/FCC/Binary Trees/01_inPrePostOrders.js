@@ -27,23 +27,23 @@ c.right = f;
     //    /  \     \
     //   d   e      f
 
-// TODO: preorder - d, b, e, a, c, f
+// TODO: preorder - a, b, d, e, c, f
 const preorder = (root) => {
     if(root === null) return;
 
-    preorder(root.left);
     console.log(root.val);
+    preorder(root.left);
     preorder(root.right);
 }
 // preorder(a);
 
 
-// TODO: inorder - a, b, d, e, c, f
+// TODO: inorder - d, b, e, a, c, f
 const inorder = (root) => {
     if(root === null) return;
 
-    console.log(root.val);
     inorder(root.left);
+    console.log(root.val);
     inorder(root.right);
 }
 // inorder(a);
