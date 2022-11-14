@@ -1,4 +1,4 @@
-let array1 = [1, 3, 5, 7, 9, 10]
+let array1 = [1, 3, 5, 7, 9, 10];
 
 // Binary search takes O(log(n)) time complexity and every time the array gets half in length while doing the serach of an element.
 
@@ -15,14 +15,14 @@ function iterativeBinarySearch(array, key) {
         if(array[mid] == key)
             return mid;
         else if(array[mid] < key) 
-            low = mid + 1
+            low = mid + 1;
         else 
-            high = mid - 1
+            high = mid - 1;
     }
     return false;
 }
 
-console.log(iterativeBinarySearch(array1, 5))
+console.log(iterativeBinarySearch(array1, 5));
 
 // -----
 
@@ -36,9 +36,9 @@ function recursiveBinarySearch(array, key, low, high) {
     if(array[mid] == key)
         return mid;
     else if(key > array[mid])
-        return recursiveBinarySearch(array, key, mid+1, high)
+        return recursiveBinarySearch(array, key, mid+1, high);
     else
-        return recursiveBinarySearch(array, key, low, mid-1)
+        return recursiveBinarySearch(array, key, low, mid-1);
 }
 
-console.log(recursiveBinarySearch(array1, 9, 0, array1.length-1))
+console.log(recursiveBinarySearch(array1, 9, 0, array1.length-1));
