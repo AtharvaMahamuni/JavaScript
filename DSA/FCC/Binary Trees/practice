@@ -44,3 +44,58 @@ const breadthFirstTraversal = (root) => {
 
     return result;
 }
+
+
+// tree includes or not
+
+const includes = (root, target) => {
+
+    if(root === null) return false;
+    
+    let stack = [ root ];
+    
+    while(stack.length > 0) {
+        let current = stack.pop();
+        
+        if(current.val === target) return true;
+        
+        if(current.left) stack.push(current.left);
+        if(current.right) stack.push(current.right);
+    }
+    
+    return false;
+}
+
+
+// includes the element or not with the depth first recurssion
+const includesDepthRecursive = (root, target) => {
+    if(root === null) return false;
+    if(root.val === target) return true;
+    
+    let leftValues = includesDepthRecursive(root.left, target);
+    let rightValues = includesDepthRecursive(root.right, target);
+    
+    return (leftValues || rightValues);
+}
+
+
+// includes the element or not with the breadth first recurssion
+
+
+const includesDepth = (root, target) => {
+
+    if(root === null) reuturn false;
+    
+    let queue = [ root ];
+    
+    while(queue.length > 0) {
+        let current = queue.shift();
+        
+        if(current.val === target) return true;
+        
+        if(current.left) queue.push(current.left);
+        if(current.right) queue.push(current.right);
+    }
+    
+    return false;
+}
