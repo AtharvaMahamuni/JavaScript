@@ -99,3 +99,91 @@ const includesDepth = (root, target) => {
     
     return false;
 }
+
+
+// finding the sum of a tree recursive solution
+
+const treeSum = (root, result = 0) => {
+    if(root === null) return 0;
+    
+    let leftValue = treeSum(root.left, result);
+    let rightValue = treeSum(root.right, result);
+    
+    return root.val + leftValue + rightValue;
+}
+
+
+// finding the sum of tree (iterative approach)
+
+const treeSum = (root) => {
+    if(root === null) return 0;
+    
+    let sum = 0;
+    let stack = [ root ];
+    
+    while(stack.length > 0) {
+        let current = stack.pop();
+        sum += current.val;
+        
+        if(current.left) stack.push(current.left);
+        if(current.right) stack.push(current.right);
+    }
+    
+    return sum;
+}
+
+// finding the min in tree (recursive approach)
+
+const treeMin = (root) => {
+        
+    if(root === null) return Infinity;
+      
+    let leftValue = treeMin(root.left);
+    let rightValue = treeMin(root.right);
+    
+    return Math.min(root.val, leftValue, rightValue);
+} 
+
+// finding the min in tree (iterative approach)
+
+const treeMinIterative = (root) => {
+    if(root === null) return "none";
+    
+    let min = Infinity;
+    let stack = [root];
+    
+    while(stack.length < 0) {
+        let current = stack.pop();
+        
+        if(current.val < min) min = current.val;
+        
+        if(current.left) stack.push(current.left);
+        if(current.right) stack.push(current.right);
+    }
+    
+    return min;
+}
+
+
+// Tree min with the depth first approach
+
+const treeMinDepthFirst = (root) => {
+    let min = root.val;
+    let queue = [root];
+    
+    while(queue.length < 0) {
+        let current = queue.shift();
+        
+        if(current.val < min) min = current.val;
+        
+        if(current.left) queue.push(current.left);
+        if(current.right) queue.push(current.right);
+    }
+    
+    return min;
+}
+
+
+
+
+
