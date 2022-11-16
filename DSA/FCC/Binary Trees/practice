@@ -1,0 +1,46 @@
+// depth first traversal -> iterative
+const depthFirstTraversal = (root) => {
+    
+    let result = [];
+    let stack = [ root ];
+    
+    while(stack.length > 0) {
+        let current = stack.pop();
+        result.push(current.val);
+        
+        if(current.right) stack.push(current.right);
+        if(current.left) stack.push(current.left);
+    }
+    
+    return result;
+}
+
+// depth first traversal -> recursive
+const depthRecursive = (root) => {
+    
+    if(root === null) return [];
+    
+    let leftValues = depthRecursive(root.left);
+    let rightValues = depthRecursive(root.right);
+    
+    return [root.val, ...leftValues, ...rightValues];
+}
+
+
+// breadth first traversal => iterative 
+const breadthFirstTraversal = (root) => {
+    if(root === null) return [];
+
+    let result = [];
+    let queue = [ root ];
+    
+    while(queue.length > 0) {
+        let current = queue.shift();
+        result.push(current);
+        
+        if(current.left) queue.push(current.left);
+        if(current.right) queue.push(current.right);
+    }
+
+    return result;
+}
