@@ -58,3 +58,35 @@ const postorder = (root) => {
     console.log(root.val);
 }
 postorder(a);
+
+
+// When want to return the array with values
+
+var inorderTraversal = function(root) {
+    if(root === null) return [];
+
+    let leftChilds = inorderTraversal(root.left);
+    let rightChilds = inorderTraversal(root.right);
+
+    return [...leftChilds, root.val, ...rightChilds];
+};
+
+
+var postorderTraversal = function(root) {
+    if(root === null) return [];
+
+    let leftChilds = postorderTraversal(root.left);
+    let rightChilds = postorderTraversal(root.right);
+
+    return [...leftChilds, ...rightChilds, root.val];
+};
+
+
+var preorderTraversal = function(root) {
+    if(root === null) return [];
+
+    let leftChilds = preorderTraversal(root.left);
+    let rightChilds = preorderTraversal(root.right);
+
+    return root.val, ...leftChilds, ...rightChilds];
+};
