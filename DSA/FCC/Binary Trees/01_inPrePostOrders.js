@@ -88,5 +88,5 @@ var preorderTraversal = function(root) {
     let leftChilds = preorderTraversal(root.left);
     let rightChilds = preorderTraversal(root.right);
 
-    return root.val, ...leftChilds, ...rightChilds];
+    return [root.val, ...leftChilds, ...rightChilds];
 };
