@@ -183,7 +183,30 @@ const treeMinDepthFirst = (root) => {
     return min;
 }
 
+// min path sum
+
+const minPathSum = (root) => {
+    if(root === null) return Infinity;
+    if(root.left === null && root.right === null) return root.val;
+    
+    const leftChild = minPathSum(root.left);
+    const rightChild = minPathSum(root.right);
+    
+    return root.val + (Math.min(leftChild, rightChild));
+}
 
 
 
+// finding the sum of tree
+
+const sumOfTree = (root) => {
+
+    if(root === null) return 0;
+    if(root.left === null && root.right === null) return root.val;
+    
+    const leftChild = sumOfTree(root.left);
+    const rightChild = sumOfTree(root.right);
+    
+    return root.val+leftChild+rightChild; 
+}
 
