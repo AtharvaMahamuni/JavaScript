@@ -10,6 +10,27 @@
 // for eg. canSum(7, [2, 4]) -> false
 
 
+/*
+// Without memo
+
+const canSum = (targetSum, array) => {
+    
+    if(targetSum === 0) return true;
+    if(targetSum < 0) return false;
+    
+    for(let val of array) {
+        let remainder = targetSum - val;
+        if(canSum(remainder, array)) 
+            return true;
+    }
+    return false;
+}
+
+console.log(canSum(7, [5,3,4,7]));
+console.log(canSum(7, [2, 4]));
+
+*/
+
 function canSum(targetSum, array, diary = {}) {
 
     if(targetSum === 0) return true;
